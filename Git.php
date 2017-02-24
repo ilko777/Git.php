@@ -940,6 +940,17 @@ class GitRepo {
     {
         return $this->run("blame {$options} {$file}");
     }
+
+    /**
+     * Get result of execution git command rev-list
+     * @param string $args
+     * @param string $options
+     * @return string
+     */
+    public function revList($args, $options = '')
+    {
+        return $this->run("rev-list {$options} {$args}");
+    }
 }
 
 /* End of file */
