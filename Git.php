@@ -648,6 +648,17 @@ class GitRepo {
 	}
 
     /**
+     * Runs a git stash show
+     *
+     * @access  public
+     * @return  string
+     */
+	public function stashShow()
+	{
+		return $this->run("stash show");
+	}
+
+    /**
      * Add a new tag on the current position
      *
      * Accepts the name for the tag and the message
