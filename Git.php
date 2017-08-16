@@ -659,6 +659,14 @@ class GitRepo {
 	}
 
     /**
+     *Runs a git shash list
+     */
+        public function stashList()
+        {
+                return $this->run("stash list");
+        }
+
+    /**
      * Add a new tag on the current position
      *
      * Accepts the name for the tag and the message
