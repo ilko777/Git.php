@@ -884,6 +884,11 @@ class GitRepo {
         $this->run("push origin --delete " . implode(" ", $branches));
 	}
 
+    public function deleteLocalBranch($branch)
+    {
+        $this->run("branch -D " . $branch);
+    }
+
 	/**
 	 * Runs git gc command
 	 *
