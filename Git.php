@@ -581,9 +581,9 @@ class GitRepo {
 	 * @param   string $branch branch name
 	 * @return  string
 	 */
-	public function merge($branch, $option = '--no-ff') {
+	public function merge($branch, $option = '--no-ff', $message='-m" "') {
 		$branch = escapeshellarg($branch);
-        return $this->run("merge $option $branch");
+        return $this->run("merge $option $branch $message");
 	}
 
 	/**
